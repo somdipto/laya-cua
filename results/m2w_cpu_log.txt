@@ -1,9 +1,29 @@
-Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:   9%|▉         | 1/11 [00:01<00:15,  1.54s/it]Fetching 11 files:  18%|█▊        | 2/11 [00:07<00:36,  4.04s/it]Fetching 11 files:  27%|██▋       | 3/11 [00:08<00:23,  2.90s/it]Fetching 11 files:  36%|███▋      | 4/11 [00:11<00:20,  2.88s/it]Fetching 11 files:  45%|████▌     | 5/11 [00:26<00:42,  7.16s/it]Fetching 11 files:  55%|█████▍    | 6/11 [00:29<00:28,  5.60s/it]Fetching 11 files:  64%|██████▎   | 7/11 [00:30<00:16,  4.24s/it]Fetching 11 files:  73%|███████▎  | 8/11 [00:33<00:11,  3.79s/it]Fetching 11 files:  82%|████████▏ | 9/11 [00:34<00:05,  2.98s/it]Fetching 11 files:  91%|█████████ | 10/11 [00:34<00:02,  2.09s/it]Fetching 11 files: 100%|██████████| 11/11 [00:34<00:00,  1.54s/it]Fetching 11 files: 100%|██████████| 11/11 [00:34<00:00,  3.17s/it]
-M2W CPU run: train rows 40 eval rows 20 (eval tasks held out whole)
-Fetching 16 files:   0%|          | 0/16 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Fetching 16 files:   6%|▋         | 1/16 [00:00<00:04,  3.50it/s]Fetching 16 files:  50%|█████     | 8/16 [00:00<00:00, 16.03it/s]Fetching 16 files:  88%|████████▊ | 14/16 [00:00<00:00, 21.95it/s]Fetching 16 files:  88%|████████▊ | 14/16 [00:20<00:00, 21.95it/s]Fetching 16 files:  94%|█████████▍| 15/16 [00:21<00:02,  2.38s/it]Fetching 16 files: 100%|██████████| 16/16 [00:35<00:00,  3.99s/it]Fetching 16 files: 100%|██████████| 16/16 [00:35<00:00,  2.24s/it]
-items 40 skipped {}
-always-click 0.65
-zero-shot {'acc': 0.65, 'pred_mix': [('click', 20)], 'type_hit': 0, 'type_n': 7, 'n': 20} (60s)
-FINE-TUNED {'acc': 0.65, 'pred_mix': [('click', 20)], 'type_hit': 0, 'type_n': 7, 'n': 20} (68s)
+
+M2W CPU run: train rows 900 eval rows 1634 (eval tasks held out whole)
+
+
+items 900 skipped {}
+always-click 0.8286
+zero-shot {'acc': 0.7809, 'pred_mix': [('click', 1545), ('done', 52), ('type', 23), ('key', 8), ('select', 6)], 'type_hit': 2, 'type_n': 211, 'n': 1634} (4988s)
+step 10/203 loss 3.6366 (373s)
+step 20/203 loss 2.2534 (744s)
+step 30/203 loss 2.3149 (1110s)
+step 40/203 loss 2.3288 (1482s)
+step 50/203 loss 2.3561 (1851s)
+step 60/203 loss 2.4523 (2224s)
+step 70/203 loss 2.4182 (2592s)
+step 80/203 loss 2.5728 (2960s)
+step 90/203 loss 2.5846 (3331s)
+step 100/203 loss 2.5014 (3702s)
+step 110/203 loss 2.5949 (4071s)
+step 120/203 loss 2.6992 (4444s)
+step 130/203 loss 2.7771 (4815s)
+step 140/203 loss 2.7546 (5186s)
+step 150/203 loss 2.7365 (5557s)
+step 160/203 loss 2.7754 (5931s)
+step 170/203 loss 2.7380 (6299s)
+step 180/203 loss 2.6554 (6670s)
+step 190/203 loss 2.6725 (7039s)
+step 200/203 loss 2.6686 (7409s)
+FINE-TUNED {'acc': 0.8286, 'pred_mix': [('click', 1634)], 'type_hit': 0, 'type_n': 211, 'n': 1634} (5411s)
 M2W CPU DONE
