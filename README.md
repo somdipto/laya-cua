@@ -68,3 +68,18 @@ Laya also decides call / no-call and which function on glaive-function-calling-v
 - `agentnet_to_laya.py`: converts OpenCUA AgentNet (MIT) trajectories into Laya rows.
 - `function_calling/laya_fc.py`: the function-calling routing run.
 - Training: the official `laya.train` RLCD loop on one T4 (single run recipe: 2 epochs, encoder LR 2.5e-5, head LR 1e-4, batch 64). A notebook will be added to this repo.
+
+
+## Mind2Web CPU fine-tune rerun (negative result)
+
+Run on a free GitHub Actions runner (CPU only, $0): https://github.com/somdipto/laya-cua/actions/runs/44786704167. Script: `m2w_cpu_finetune.py`. Raw numbers: `results/m2w_cpu_results.json`, log: `results/m2w_cpu_log.txt`.
+
+Task: next action type on Mind2Web (osunlp/Mind2Web, CC-BY-4.0), text of the cleaned HTML only, whole tasks held out, 1634 eval steps.
+
+| Model | Accuracy | Type recall |
+|---|---|---|
+| always-click | 0.8286 | n/a |
+| laya-cua v1, zero-shot | 0.7809 | 2/211 |
+| fine-tuned, 1 epoch, 900 train rows, CPU | 0.8286 | 0/211 |
+
+The fine-tuned model predicts "click" for every step, so it matches always-click and adds nothing. Single run, one seed, 900 of 6141 train rows, 512-token inputs, one epoch, because of the free CPU limit. This does not show what a full-data GPU fine-tune would do. The chart is on the model card: https://huggingface.co/sodan/laya-cua
