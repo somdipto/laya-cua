@@ -29,7 +29,21 @@ ids = sorted({r["task_id"] for r in rows}); random.Random(11).shuffle(ids)
 ev_ids = set(ids[:int(len(ids) * 0.2)])
 train_rows = [r for r in rows if r["task_id"] not in ev_ids]; eval_rows = [r for r in rows if r["task_id"] in ev_ids]
 assert not ({r["task_id"] for r in train_rows} & {r["task_id"] for r in eval_rows})
-random.Random(5).shuffle(train_rows); train_rows = train_rows[:N_TRAIN]
+random.Random(5).shuffle(train_rows)
+BAL = os.environ.get("BALANCED", "0") == "1"
+if BAL:
+    by = collections.defaultdict(list)
+    for r in train_rows: by[r["expected"]["action_type"]].append(r)
+    cap = {"type": N_TRAIN // 3, "select": N_TRAIN // 6}
+    sel = []
+    for k, v in by.items():
+        if k in cap: sel += v[:cap[k]]
+    n_non = sum(1 for r in sel)
+    sel += by.get("click", [])[:max(0, N_TRAIN - n_non)]
+    train_rows = sel; random.Random(6).shuffle(train_rows)
+    print("balanced train mix", collections.Counter(r["expected"]["action_type"] for r in train_rows).most_common(), flush=True)
+else:
+    train_rows = train_rows[:N_TRAIN]
 if EVAL_N: eval_rows = eval_rows[:EVAL_N]
 print("M2W CPU run: train rows", len(train_rows), "eval rows", len(eval_rows), "(eval tasks held out whole)", flush=True)
 model_dir = snapshot_download("sodan/laya-cua"); _fix_tokenizer_config(model_dir)
@@ -44,10 +58,13 @@ def ev(agent):
     g = [r["expected"]["action_type"] for r in eval_rows]
     return {"acc": round(float(np.mean([a == b for a, b in zip(p, g)])), 4), "pred_mix": collections.Counter(p).most_common(5), "type_hit": sum(a == b == "type" for a, b in zip(p, g)), "type_n": g.count("type"), "n": len(g)}
 gold = [r["expected"]["action_type"] for r in eval_rows]
-res = {"n_train_rows": len(train_rows), "n_eval_rows": len(eval_rows), "always_click": round(gold.count("click") / len(gold), 4), "train_maxlen": TRAIN_MAXLEN, "cpu_count": os.cpu_count()}
+res = {"balanced": os.environ.get("BALANCED","0")=="1", "n_train_rows": len(train_rows), "n_eval_rows": len(eval_rows), "always_click": round(gold.count("click") / len(gold), 4), "train_maxlen": TRAIN_MAXLEN, "cpu_count": os.cpu_count()}
 print("always-click", res["always_click"], flush=True)
 t0 = time.time()
-v1 = laya.Agent(model_dir, device="cpu"); res["zero_shot"] = ev(v1); print("zero-shot", res["zero_shot"], f"({time.time()-t0:.0f}s)", flush=True); del v1
+if os.environ.get("SKIP_ZS", "0") == "1":
+    res["zero_shot"] = {"acc": 0.7809, "type_hit": 2, "type_n": 211, "n": 1634, "note": "from the earlier run on the same eval split (not recomputed)"}
+else:
+    v1 = laya.Agent(model_dir, device="cpu"); res["zero_shot"] = ev(v1); print("zero-shot", res["zero_shot"], f"({time.time()-t0:.0f}s)", flush=True); del v1
 device = torch.device("cpu"); OUT = "laya_m2w_cpu"; EPOCHS = 1
 model = build_model(cfg, encoder_dir=os.path.join(model_dir, "encoder"))
 model.load_state_dict(load_file(os.path.join(model_dir, "model.safetensors")), strict=True)
@@ -77,7 +94,7 @@ out_cfg = dict(cfg, max_len=1024, fine_tuned=True, model_name="laya-cua-m2w-cpu"
 if fitted["temperature_by_options"]: out_cfg["temperature_by_options"] = fitted["temperature_by_options"]
 save_checkpoint(model, tok, out_cfg, OUT); del model, opt
 t0 = time.time(); ft = laya.Agent(OUT, device="cpu"); res["fine_tuned"] = ev(ft); print("FINE-TUNED", res["fine_tuned"], f"({time.time()-t0:.0f}s)", flush=True)
-json.dump(res, open("m2w_cpu_results.json", "w"), indent=1)
+json.dump(res, open("m2w_cpu_results_" + os.environ.get("TAG","run") + ".json", "w"), indent=1)
 import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
 fig, ax = plt.subplots(figsize=(7.5, 4.6))
 names = ["always-click", "laya-cua v1\nzero-shot", f"fine-tuned\n({res['n_train_rows']} rows, CPU)"]
@@ -87,5 +104,5 @@ for b_, v in zip(bars, vals): ax.text(b_.get_x() + b_.get_width() / 2, v + 0.005
 ax.set_ylim(0, 1); ax.set_ylabel("next-action-type accuracy")
 ax.set_title(f"Mind2Web held-out tasks ({res['n_eval_rows']} steps). Type recall: zero-shot {res['zero_shot']['type_hit']}/{res['zero_shot']['type_n']}, fine-tuned {res['fine_tuned']['type_hit']}/{res['fine_tuned']['type_n']}", fontsize=8)
 fig.text(0.5, 0.01, "Single run, 1 epoch on a small CPU-sized subset of train rows, GitHub Actions free runner. Not a full-data result.", ha="center", fontsize=7)
-fig.tight_layout(rect=[0, 0.04, 1, 1]); fig.savefig("m2w_cpu_results.png", dpi=150)
+fig.tight_layout(rect=[0, 0.04, 1, 1]); fig.savefig("m2w_cpu_results_" + os.environ.get("TAG","run") + ".png", dpi=150)
 print("M2W CPU DONE", flush=True)
