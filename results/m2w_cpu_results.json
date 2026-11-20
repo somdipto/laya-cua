@@ -1,33 +1,49 @@
 {
- "n_train_rows": 40,
- "n_eval_rows": 20,
- "always_click": 0.65,
+ "n_train_rows": 900,
+ "n_eval_rows": 1634,
+ "always_click": 0.8286,
  "train_maxlen": 512,
  "cpu_count": 4,
  "zero_shot": {
-  "acc": 0.65,
+  "acc": 0.7809,
   "pred_mix": [
    [
     "click",
-    20
+    1545
+   ],
+   [
+    "done",
+    52
+   ],
+   [
+    "type",
+    23
+   ],
+   [
+    "key",
+    8
+   ],
+   [
+    "select",
+    6
    ]
   ],
-  "type_hit": 0,
-  "type_n": 7,
-  "n": 20
+  "type_hit": 2,
+  "type_n": 211,
+  "n": 1634
  },
- "train_seconds": 302,
- "train_loss": 1.4828,
+ "train_seconds": 7504,
+ "train_loss": 2.6921,
  "fine_tuned": {
-  "acc": 0.65,
+  "acc": 0.8286,
   "pred_mix": [
    [
     "click",
-    20
+    1634
    ]
   ],
   "type_hit": 0,
-  "type_n": 7,
-  "n": 20
+  "type_n": 211,
+  "n": 1634
  }
 }
