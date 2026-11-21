@@ -1,0 +1,85 @@
+{
+ "summary": {
+  "n": 4,
+  "gold_mix": [
+   [
+    "click",
+    3
+   ],
+   [
+    "type",
+    1
+   ]
+  ],
+  "always_click": 0.75,
+  "laya_oracle_target_acc": 1.0,
+  "laya_showui_target_acc": 0.75,
+  "type_recall_oracle": [
+   1,
+   1
+  ],
+  "type_recall_showui": [
+   0,
+   1
+  ],
+  "showui_point_in_target_box": 0.75,
+  "showui_selected_exact_element": 0.75,
+  "showui_point_on_any_candidate": 1.0,
+  "pred_mix_oracle": [
+   [
+    "click",
+    3
+   ],
+   [
+    "type",
+    1
+   ]
+  ],
+  "pred_mix_showui": [
+   [
+    "click",
+    4
+   ]
+  ],
+  "laya_train_rows": 20,
+  "laya_train_loss": 4.066
+ },
+ "rows": [
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  }
+ ]
+}
