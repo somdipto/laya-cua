@@ -83,3 +83,16 @@ Task: next action type on Mind2Web (osunlp/Mind2Web, CC-BY-4.0), text of the cle
 | fine-tuned, 1 epoch, 900 train rows, CPU | 0.8286 | 0/211 |
 
 The fine-tuned model predicts "click" for every step, so it matches always-click and adds nothing. Single run, one seed, 900 of 6141 train rows, 512-token inputs, one epoch, because of the free CPU limit. This does not show what a full-data GPU fine-tune would do. The chart is on the model card: https://huggingface.co/sodan/laya-cua
+
+### More Mind2Web runs: all three fine-tunes collapse to click (negative result)
+Same eval for every row: 1634 held-out-task steps, always-click 0.8286, laya-cua v1 zero-shot 0.7809 (TYPE recall 2/211). Each fine-tune is a single run, single seed.
+
+| Run | Train rows | Accuracy | TYPE recall | Predicts |
+|---|---|---|---|---|
+| CPU, GitHub Actions, 1 epoch | 900 | 0.8286 | 0/211 | click on every step |
+| CPU, class-balanced, 1 epoch (https://github.com/somdipto/laya-cua/actions/runs/44835333968) | 900 | 0.8286 | 0/211 | click on every step |
+| GPU, free Colab T4, 1 epoch, train loss 2.43 | 6141 | 0.8286 | 0/211 | click on every step |
+
+Check on the GPU checkpoint: with max_len 512 or 1024 and with the fitted or neutral temperature, it still predicts click for all of 100 TRAIN rows it saw (47 type, 13 select, 40 click; accuracy 0.40, the click share) and for 300 held-out rows (0.763). So the collapse is not an eval-config artifact.
+
+Likely cause (hypothesis, not tested): the input is the task, the first 1500 characters of page text and recent steps. On Mind2Web the operation depends on which element is the target, and the target is not in the input, so predicting the majority class is the best the model can do here. The next experiment adds the target element's tag and attributes to the input. This does not say Laya cannot work as a decision layer; it says this recipe on this input does not.
