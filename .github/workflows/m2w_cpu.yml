@@ -7,6 +7,7 @@ on:
       balanced: {description: "1 = balance train mix", default: "0"}
       skip_zs: {description: "1 = skip zero-shot eval", default: "0"}
       tag: {description: "result tag", default: "run"}
+      diag: {description: "1 = diagnostic mode", default: "0"}
 permissions:
   contents: write
 jobs:
@@ -26,6 +27,7 @@ jobs:
           BALANCED: ${{ inputs.balanced }}
           SKIP_ZS: ${{ inputs.skip_zs }}
           TAG: ${{ inputs.tag }}
+          DIAG: ${{ inputs.diag }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -37,6 +39,6 @@ jobs:
       - name: commit results
         if: success()
         run: |
-          mkdir -p results && cp m2w_cpu_results_*.json m2w_cpu_results_*.png results/ && cp m2w_cpu_log.txt results/m2w_cpu_log_${{ inputs.tag }}.txt
+          mkdir -p results && cp m2w_cpu_results_*.json results/ && (cp m2w_cpu_results_*.png results/ || true) && cp m2w_cpu_log.txt results/m2w_cpu_log_${{ inputs.tag }}.txt
           git config user.name "github-actions"; git config user.email "actions@users.noreply.github.com"
           git add results && git commit -m "Mind2Web CPU fine-tune: real results from Actions run" && git pull --rebase origin main && git push
