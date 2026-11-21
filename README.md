@@ -96,3 +96,17 @@ Same eval for every row: 1634 held-out-task steps, always-click 0.8286, laya-cua
 Check on the GPU checkpoint: with max_len 512 or 1024 and with the fitted or neutral temperature, it still predicts click for all of 100 TRAIN rows it saw (47 type, 13 select, 40 click; accuracy 0.40, the click share) and for 300 held-out rows (0.763). So the collapse is not an eval-config artifact.
 
 Likely cause (hypothesis, not tested): the input is the task, the first 1500 characters of page text and recent steps. On Mind2Web the operation depends on which element is the target, and the target is not in the input, so predicting the majority class is the best the model can do here. The next experiment adds the target element's tag and attributes to the input. This does not say Laya cannot work as a decision layer; it says this recipe on this input does not.
+
+### Positive result with an oracle target: Mind2Web operation type, target element given
+Same 1634 held-out-task steps. The input now also has the recorded GROUND-TRUTH target element (tag and a few attributes) for the step. No model picks that element, so this is not end-to-end. It tests one thing: given a target, can Laya choose click, type or select. Free GitHub Actions CPU runner, 900 class-balanced train rows (450 click, 300 type, 150 select), 1 epoch, train loss 0.88, single run, one seed. Run: https://github.com/somdipto/laya-cua/actions/runs/44865069411 . Raw numbers: https://github.com/somdipto/laya-cua/blob/main/results/m2w_target_results_target900.json
+
+![Mind2Web oracle-target fine-tune](https://raw.githubusercontent.com/somdipto/laya-cua/main/results/m2w_target_results_target900.png)
+
+| Model | Accuracy | TYPE recall |
+|---|---|---|
+| always-click | 0.8286 | n/a |
+| laya-cua v1 zero-shot (no target in input) | 0.7809 | 2/211 |
+| fine-tuned, no target in input (3 runs above) | 0.8286 | 0/211 |
+| fine-tuned, oracle target in input | 0.9119 | 197/211 |
+
+Predicted mix: 1250 click, 316 type, 68 select. This is 8 points above always-click and the first fine-tune here that is not all-click, which supports the hypothesis that the missing target element was the cause. Caveats: single run, the target is the ground-truth element, only 900 of 6141 train rows were used, and the 8-point gap is on one split with no confidence interval. A real agent would need a separate model to choose the target.
