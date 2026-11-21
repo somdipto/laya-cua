@@ -7,7 +7,11 @@ ds = load_dataset("rootsautomation/ScreenSpot", split="test")
 idx = list(range(len(ds))); random.Random(3).shuffle(idx); idx = idx[:N]
 print("ScreenSpot total", len(ds), "using", len(idx), flush=True)
 mp = int(os.environ.get("SS_MAXPIX", "400")) * 28 * 28
-proc = AutoProcessor.from_pretrained("showlab/ShowUI-2B", min_pixels=64 * 28 * 28, max_pixels=mp)
+try:
+    proc = AutoProcessor.from_pretrained("showlab/ShowUI-2B", min_pixels=64 * 28 * 28, max_pixels=mp)
+except Exception as e:
+    print("ShowUI processor failed to load:", repr(e)[:300], "-> using the processor of its base model Qwen/Qwen2-VL-2B-Instruct (ShowUI-2B is fine-tuned from it)", flush=True)
+    proc = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-2B-Instruct", min_pixels=64 * 28 * 28, max_pixels=mp)
 model = Qwen2VLForConditionalGeneration.from_pretrained("showlab/ShowUI-2B", torch_dtype=torch.float32).eval()
 SYS = "Based on the screenshot of the page, I give a text description and you give its corresponding location. The coordinate represents a clickable location [x, y] for an element, which is a relative coordinate on the screenshot, scaled from 0 to 1."
 res = []; rng = random.Random(9); t0 = time.time(); bad = 0
