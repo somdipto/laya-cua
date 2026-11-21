@@ -125,3 +125,18 @@ This measures a separate grounding model (showlab/ShowUI-2B, MIT), not Laya. It 
 By type: text 0.378 (n=111), icon 0.427 (n=89). By source: android 0.71 (31), ios 0.52 (46), windows 0.45 (29), forum 0.30 (20), macos 0.27 (26), shop 0.21 (19), gitlab 0.17 (12), tool 0.12 (17). Small per-source counts.
 
 Caveat: 0.40 is far below what the ShowUI authors report for the full benchmark at full resolution. I did not find the cause. The cut in image resolution is the most likely factor, but that is a guess, not tested. Do not compare this number with published ones. It only shows a small grounding model gets the target right clearly more often than chance on a subset. No end-to-end pipeline (Laya plus a grounding model on the same steps) has been run or measured.
+
+### Small pipeline test: ShowUI-2B picks the target, Laya decides the operation (n=100, single run)
+Two models on the same 100 steps from the Multimodal-Mind2Web test_task split (osunlp/Multimodal-Mind2Web, OpenRAIL licence). ShowUI-2B (MIT) gets a screenshot and the element's name text and returns a click point. The point is mapped to the smallest candidate element box that contains it. Laya (re-trained for this run on 900 class-balanced Mind2Web text rows, 1 epoch, train loss 1.22) gets that element's tag and attributes plus the task and page text and picks click, type or select. Free GitHub Actions CPU, about 3.6 hours. Run: https://github.com/somdipto/laya-cua/actions/runs/44900747967 . Raw numbers: https://github.com/somdipto/laya-cua/blob/main/results/pipeline_results_pipe.json (files named smoke2 in results/ are a 4-step smoke test, not a result).
+
+![Small pipeline test](https://raw.githubusercontent.com/somdipto/laya-cua/main/results/pipeline_results_pipe.png)
+
+| Setup | Operation accuracy (n=100) | TYPE recall (n=23) |
+|---|---|---|
+| always-click (76 click, 23 type, 1 select) | 0.76 | 0/23 |
+| Laya + ground-truth target element | 0.87 | 21/23 |
+| Laya + ShowUI-2B's target | 0.80 | 11/23 |
+
+ShowUI's click point fell inside the true target box on 43 of 100 steps, and it selected the exact right element on 38 of 100. Laya's operation accuracy dropped from 0.87 to 0.80 when it was given ShowUI's element instead of the true one. It stays 4 points above always-click, which is within what 100 steps can resolve (about +-8 points), so treat this as a hint, not a confirmed gain.
+
+Caveats: 100 steps, one run, one seed. Only steps whose target sits in the top 1280x720 of the page were used, because ShowUI expects a viewport screenshot (285 rows scanned to find 100). ShowUI was given the element's name from the annotation, which makes grounding easier than with a task alone. Screenshots were resized to 1008x560. Past steps in the history use the dataset's role names, while training used HTML tags. Only 1 of the 100 steps was a select. Not comparable with published Mind2Web numbers. Laya still does not output coordinates or text.
