@@ -1,0 +1,29 @@
+{
+ "balanced": true,
+ "n_train_rows": 900,
+ "n_eval_rows": 1634,
+ "always_click": 0.8286,
+ "train_maxlen": 512,
+ "cpu_count": 4,
+ "zero_shot": {
+  "acc": 0.7809,
+  "type_hit": 2,
+  "type_n": 211,
+  "n": 1634,
+  "note": "from the earlier run on the same eval split (not recomputed)"
+ },
+ "train_seconds": 6522,
+ "train_loss": 1.193,
+ "fine_tuned": {
+  "acc": 0.8286,
+  "pred_mix": [
+   [
+    "click",
+    1634
+   ]
+  ],
+  "type_hit": 0,
+  "type_n": 211,
+  "n": 1634
+ }
+}
