@@ -110,3 +110,18 @@ Same 1634 held-out-task steps. The input now also has the recorded GROUND-TRUTH 
 | fine-tuned, oracle target in input | 0.9119 | 197/211 |
 
 Predicted mix: 1250 click, 316 type, 68 select. This is 8 points above always-click and the first fine-tune here that is not all-click, which supports the hypothesis that the missing target element was the cause. Caveats: single run, the target is the ground-truth element, only 900 of 6141 train rows were used, and the 8-point gap is on one split with no confidence interval. A real agent would need a separate model to choose the target.
+
+### Grounding check: ShowUI-2B on ScreenSpot (reference model, Laya not involved)
+This measures a separate grounding model (showlab/ShowUI-2B, MIT), not Laya. It is the kind of model that would pick the target for Laya's decision. Metric: the predicted click point falls inside the target box. Random 200-sample subset of ScreenSpot (rootsautomation/ScreenSpot, apache-2.0, 1272 total), single run, free GitHub Actions CPU in float32, image resolution cut to at most 400*28*28 pixels for speed. Run: https://github.com/somdipto/laya-cua/actions/runs/44886978790 . Raw numbers: https://github.com/somdipto/laya-cua/blob/main/results/screenspot_results_ss.json
+
+![ScreenSpot subset](https://raw.githubusercontent.com/somdipto/laya-cua/main/results/screenspot_results_ss.png)
+
+| | click-in-box accuracy (n=200) |
+|---|---|
+| centre-of-screen point | 0.020 |
+| random point | 0.010 |
+| ShowUI-2B (reduced resolution, CPU) | 0.400 |
+
+By type: text 0.378 (n=111), icon 0.427 (n=89). By source: android 0.71 (31), ios 0.52 (46), windows 0.45 (29), forum 0.30 (20), macos 0.27 (26), shop 0.21 (19), gitlab 0.17 (12), tool 0.12 (17). Small per-source counts.
+
+Caveat: 0.40 is far below what the ShowUI authors report for the full benchmark at full resolution. I did not find the cause. The cut in image resolution is the most likely factor, but that is a guess, not tested. Do not compare this number with published ones. It only shows a small grounding model gets the target right clearly more often than chance on a subset. No end-to-end pipeline (Laya plus a grounding model on the same steps) has been run or measured.
