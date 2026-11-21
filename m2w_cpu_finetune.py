@@ -93,6 +93,33 @@ fitted = fit_temperature_map(calibration_records(model, tok, calib_items, device
 out_cfg = dict(cfg, max_len=1024, fine_tuned=True, model_name="laya-cua-m2w-cpu", temperature=fitted["temperature"]); out_cfg.pop("temperature_by_options", None)
 if fitted["temperature_by_options"]: out_cfg["temperature_by_options"] = fitted["temperature_by_options"]
 save_checkpoint(model, tok, out_cfg, OUT); del model, opt
+if os.environ.get("DIAG", "0") == "1":
+    import glob as _g, copy
+    print("DIAG files", sorted(os.listdir(OUT)), flush=True)
+    cfgs = [p for p in _g.glob(OUT + "/*.json") if "max_len" in open(p).read()]
+    print("DIAG cfg files with max_len", cfgs, flush=True)
+    def ev_rows(agent, rws):
+        p = [agent.predict(r["state"], Q)["answers"]["action_type"]["choice"] for r in rws]
+        g = [r["expected"]["action_type"] for r in rws]
+        return {"acc": round(float(np.mean([a == b for a, b in zip(p, g)])), 3), "pred": collections.Counter(p).most_common(4), "gold": collections.Counter(g).most_common(4)}
+    seen = [r for r in train_rows if r["expected"]["action_type"] != "click"][:60] + [r for r in train_rows if r["expected"]["action_type"] == "click"][:40]
+    heldout = eval_rows[:200]
+    orig = {p: open(p).read() for p in cfgs}
+    diag = {}
+    for ml in (512, 1024):
+        for temp_off in (False, True):
+            for p in cfgs:
+                d = json.loads(orig[p]); d["max_len"] = ml
+                if temp_off:
+                    d["temperature"] = 1.0; d.pop("temperature_by_options", None)
+                json.dump(d, open(p, "w"))
+            ag = laya.Agent(OUT, device="cpu")
+            key = f"maxlen{ml}_temp{'1.0' if temp_off else 'fitted'}"
+            diag[key] = {"seen_train_100": ev_rows(ag, seen), "heldout_200": ev_rows(ag, heldout)}
+            print("DIAG", key, diag[key], flush=True); del ag
+    for p in cfgs: open(p, "w").write(orig[p])
+    json.dump(diag, open("m2w_cpu_results_diag.json", "w"), indent=1)
+    import sys; sys.exit(0)
 t0 = time.time(); ft = laya.Agent(OUT, device="cpu"); res["fine_tuned"] = ev(ft); print("FINE-TUNED", res["fine_tuned"], f"({time.time()-t0:.0f}s)", flush=True)
 json.dump(res, open("m2w_cpu_results_" + os.environ.get("TAG","run") + ".json", "w"), indent=1)
 import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
