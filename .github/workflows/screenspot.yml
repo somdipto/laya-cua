@@ -14,9 +14,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.11"}
-      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
       - run: pip install "transformers>=4.48.0" datasets pillow numpy matplotlib accelerate
-      - run: python screenspot_cpu.py 2>&1 | tee screenspot_log.txt
+      - run: set -o pipefail; python screenspot_cpu.py 2>&1 | tee screenspot_log.txt
         env:
           SS_N: ${{ inputs.n }}
           TAG: ${{ inputs.tag }}
