@@ -1,0 +1,965 @@
+{
+ "summary": {
+  "n": 100,
+  "gold_mix": [
+   [
+    "click",
+    76
+   ],
+   [
+    "type",
+    23
+   ],
+   [
+    "select",
+    1
+   ]
+  ],
+  "always_click": 0.76,
+  "laya_oracle_target_acc": 0.87,
+  "laya_showui_target_acc": 0.8,
+  "type_recall_oracle": [
+   21,
+   23
+  ],
+  "type_recall_showui": [
+   11,
+   23
+  ],
+  "showui_point_in_target_box": 0.43,
+  "showui_selected_exact_element": 0.38,
+  "showui_point_on_any_candidate": 1.0,
+  "pred_mix_oracle": [
+   [
+    "click",
+    67
+   ],
+   [
+    "type",
+    32
+   ],
+   [
+    "select",
+    1
+   ]
+  ],
+  "pred_mix_showui": [
+   [
+    "click",
+    80
+   ],
+   [
+    "type",
+    19
+   ],
+   [
+    "select",
+    1
+   ]
+  ],
+  "laya_train_rows": 900,
+  "laya_train_loss": 1.2216
+ },
+ "rows": [
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "type",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "type",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "type"
+  },
+  {
+   "gold": "select",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "select",
+   "laya_showui": "select"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "click",
+   "ground_hit": true,
+   "parsed": true,
+   "elem_match": true,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  },
+  {
+   "gold": "type",
+   "ground_hit": false,
+   "parsed": true,
+   "elem_match": false,
+   "chosen_found": true,
+   "laya_oracle": "click",
+   "laya_showui": "click"
+  }
+ ]
+}

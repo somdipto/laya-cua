@@ -1,0 +1,53 @@
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:   9%|▉         | 1/11 [00:00<00:04,  2.18it/s]Fetching 11 files:  18%|█▊        | 2/11 [00:08<00:43,  4.81s/it]Fetching 11 files:  27%|██▋       | 3/11 [00:10<00:28,  3.58s/it]Fetching 11 files:  36%|███▋      | 4/11 [00:10<00:16,  2.36s/it]Fetching 11 files:  45%|████▌     | 5/11 [00:11<00:11,  1.87s/it]Fetching 11 files:  55%|█████▍    | 6/11 [00:14<00:09,  2.00s/it]Fetching 11 files:  64%|██████▎   | 7/11 [00:14<00:05,  1.40s/it]Fetching 11 files:  73%|███████▎  | 8/11 [00:15<00:03,  1.22s/it]Fetching 11 files:  82%|████████▏ | 9/11 [00:15<00:01,  1.15it/s]Fetching 11 files:  91%|█████████ | 10/11 [00:16<00:00,  1.06it/s]Fetching 11 files: 100%|██████████| 11/11 [00:16<00:00,  1.22it/s]Fetching 11 files: 100%|██████████| 11/11 [00:16<00:00,  1.54s/it]
+balanced train mix [('click', 450), ('type', 300), ('select', 150)]
+M2W CPU run: train rows 900 eval rows 1 (eval tasks held out whole)
+Fetching 18 files:   0%|          | 0/18 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 18 files:  50%|█████     | 9/18 [00:00<00:00, 86.93it/s]Fetching 18 files: 100%|██████████| 18/18 [00:05<00:00,  2.86it/s]Fetching 18 files: 100%|██████████| 18/18 [00:05<00:00,  3.35it/s]
+items 900 skipped {}
+always-click 1.0
+step 10/203 loss 2.9243 (317s)
+step 20/203 loss 1.8347 (632s)
+step 30/203 loss 1.2297 (949s)
+step 40/203 loss 1.1469 (1264s)
+step 50/203 loss 1.1123 (1575s)
+step 60/203 loss 1.0049 (1885s)
+step 70/203 loss 1.1080 (2193s)
+step 80/203 loss 1.1951 (2512s)
+step 90/203 loss 1.2392 (2837s)
+step 100/203 loss 1.1700 (3163s)
+step 110/203 loss 1.2182 (3476s)
+step 120/203 loss 1.5623 (3803s)
+step 130/203 loss 1.4426 (4113s)
+step 140/203 loss 1.4383 (4430s)
+step 150/203 loss 1.3496 (4735s)
+step 160/203 loss 1.2963 (5052s)
+step 170/203 loss 1.2676 (5371s)
+step 180/203 loss 1.2334 (5696s)
+step 190/203 loss 1.2790 (6014s)
+step 200/203 loss 1.2400 (6330s)
+TRAIN PHASE DONE 1.2216
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+pipeline steps selected 100 from 285 rows scanned; ops Counter({'click': 76, 'type': 23, 'select': 1})
+Loading weights:   0%|          | 0/730 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 88/730 [00:00<00:00, 789.43it/s]Loading weights:  23%|██▎       | 167/730 [00:00<00:01, 390.99it/s]Loading weights:  30%|██▉       | 217/730 [00:00<00:02, 245.16it/s]Loading weights:  34%|███▍      | 251/730 [00:00<00:02, 210.54it/s]Loading weights:  38%|███▊      | 277/730 [00:01<00:02, 201.04it/s]Loading weights:  41%|████      | 300/730 [00:01<00:02, 186.41it/s]Loading weights:  44%|████▍     | 320/730 [00:01<00:02, 175.86it/s]Loading weights:  49%|████▊     | 355/730 [00:01<00:01, 208.69it/s]Loading weights:  52%|█████▏    | 378/730 [00:02<00:03, 115.21it/s]Loading weights:  60%|██████    | 441/730 [00:02<00:01, 188.95it/s]Loading weights:  65%|██████▍   | 471/730 [00:02<00:01, 166.84it/s]Loading weights:  68%|██████▊   | 496/730 [00:02<00:01, 164.32it/s]Loading weights:  71%|███████   | 518/730 [00:02<00:01, 149.81it/s]Loading weights:  74%|███████▎  | 537/730 [00:02<00:01, 131.95it/s]Loading weights:  77%|███████▋  | 559/730 [00:03<00:01, 128.03it/s]Loading weights:  79%|███████▊  | 574/730 [00:03<00:01, 111.40it/s]Loading weights:  80%|████████  | 587/730 [00:03<00:01, 108.52it/s]Loading weights:  85%|████████▌ | 621/730 [00:03<00:00, 145.35it/s]Loading weights:  88%|████████▊ | 643/730 [00:03<00:00, 146.30it/s]Loading weights:  90%|█████████ | 659/730 [00:05<00:02, 27.83it/s] Loading weights:  92%|█████████▏| 671/730 [00:06<00:02, 22.39it/s]Loading weights:  93%|█████████▎| 680/730 [00:07<00:02, 18.84it/s]Loading weights:  94%|█████████▍| 687/730 [00:07<00:02, 20.85it/s]Loading weights:  95%|█████████▍| 693/730 [00:08<00:02, 14.78it/s]Loading weights:  96%|█████████▌| 698/730 [00:10<00:03, 10.06it/s]Loading weights:  96%|█████████▌| 702/730 [00:10<00:02, 10.52it/s]Loading weights:  97%|█████████▋| 705/730 [00:10<00:02, 11.58it/s]Loading weights:  97%|█████████▋| 708/730 [00:11<00:02,  8.29it/s]Loading weights:  97%|█████████▋| 710/730 [00:11<00:02,  8.84it/s]Loading weights:  98%|█████████▊| 719/730 [00:13<00:01,  6.71it/s]Loading weights: 100%|█████████▉| 727/730 [00:14<00:00,  6.37it/s]Loading weights: 100%|██████████| 730/730 [00:14<00:00, 49.94it/s]
+5/100 ground 0.600 oracle-op 1.000 showui-op 0.800 (347s)
+10/100 ground 0.400 oracle-op 1.000 showui-op 0.700 (673s)
+15/100 ground 0.400 oracle-op 1.000 showui-op 0.800 (978s)
+20/100 ground 0.450 oracle-op 1.000 showui-op 0.850 (1279s)
+25/100 ground 0.480 oracle-op 1.000 showui-op 0.840 (1586s)
+30/100 ground 0.533 oracle-op 1.000 showui-op 0.833 (1893s)
+35/100 ground 0.514 oracle-op 1.000 showui-op 0.829 (2196s)
+40/100 ground 0.500 oracle-op 0.975 showui-op 0.825 (2496s)
+45/100 ground 0.489 oracle-op 0.956 showui-op 0.844 (2798s)
+50/100 ground 0.480 oracle-op 0.920 showui-op 0.800 (3102s)
+55/100 ground 0.491 oracle-op 0.927 showui-op 0.800 (3408s)
+60/100 ground 0.467 oracle-op 0.933 showui-op 0.800 (3710s)
+65/100 ground 0.492 oracle-op 0.938 showui-op 0.815 (4014s)
+70/100 ground 0.471 oracle-op 0.929 showui-op 0.814 (4324s)
+75/100 ground 0.467 oracle-op 0.933 showui-op 0.827 (4633s)
+80/100 ground 0.475 oracle-op 0.925 showui-op 0.838 (4940s)
+85/100 ground 0.447 oracle-op 0.929 showui-op 0.812 (5248s)
+90/100 ground 0.422 oracle-op 0.889 showui-op 0.822 (5556s)
+95/100 ground 0.421 oracle-op 0.884 showui-op 0.811 (5860s)
+100/100 ground 0.430 oracle-op 0.870 showui-op 0.800 (6163s)
+PIPE RESULT {"n": 100, "gold_mix": [["click", 76], ["type", 23], ["select", 1]], "always_click": 0.76, "laya_oracle_target_acc": 0.87, "laya_showui_target_acc": 0.8, "type_recall_oracle": [21, 23], "type_recall_showui": [11, 23], "showui_point_in_target_box": 0.43, "showui_selected_exact_element": 0.38, "showui_point_on_any_candidate": 1.0, "pred_mix_oracle": [["click", 67], ["type", 32], ["select", 1]], "pred_mix_showui": [["click", 80], ["type", 19], ["select", 1]], "laya_train_rows": 900, "laya_train_loss": 1.2216}
+PIPE DONE
