@@ -1,0 +1,44 @@
+name: laya-m2w-target-finetune
+on:
+  workflow_dispatch:
+    inputs:
+      n_train: {description: "train rows", default: "1200"}
+      eval_n: {description: "eval rows (0 = all 1634)", default: "0"}
+      balanced: {description: "1 = balance train mix", default: "0"}
+      skip_zs: {description: "1 = skip zero-shot eval", default: "0"}
+      tag: {description: "result tag", default: "run"}
+      diag: {description: "1 = diagnostic mode", default: "0"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install "laya>=0.1.6" "transformers>=4.48.0" safetensors huggingface_hub numpy scipy pandas matplotlib accelerate
+      - run: python m2w_target_finetune.py 2>&1 | tee m2w_target_log.txt
+        env:
+          N_TRAIN: ${{ inputs.n_train }}
+          EVAL_N: ${{ inputs.eval_n }}
+          BALANCED: ${{ inputs.balanced }}
+          SKIP_ZS: ${{ inputs.skip_zs }}
+          TAG: ${{ inputs.tag }}
+          DIAG: ${{ inputs.diag }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m2w-cpu
+          path: |
+            m2w_target_log.txt
+            m2w_target_results_*.json
+            m2w_target_results_*.png
+      - name: commit results
+        if: success()
+        run: |
+          mkdir -p results && cp m2w_target_results_*.json results/ && (cp m2w_target_results_*.png results/ || true) && cp m2w_target_log.txt results/m2w_target_log_${{ inputs.tag }}.txt
+          git config user.name "github-actions"; git config user.email "actions@users.noreply.github.com"
+          git add results && git commit -m "Mind2Web CPU fine-tune: real results from Actions run" && git pull --rebase origin main && git push
