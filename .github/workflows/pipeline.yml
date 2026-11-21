@@ -17,7 +17,13 @@ jobs:
         with: {python-version: "3.11"}
       - run: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
       - run: pip install "laya>=0.1.6" "transformers>=4.48.0" safetensors huggingface_hub numpy scipy pandas matplotlib accelerate datasets pillow
-      - run: set -o pipefail; python pipeline_cpu.py 2>&1 | tee pipeline_log.txt
+      - run: set -o pipefail; python pipeline_train.py 2>&1 | tee pipeline_log.txt
+        env:
+          N_TRAIN: ${{ inputs.n_train }}
+          BALANCED: "1"
+          SKIP_ZS: "1"
+          EVAL_N: "1"
+      - run: set -o pipefail; python pipeline_eval.py 2>&1 | tee -a pipeline_log.txt
         env:
           N_TRAIN: ${{ inputs.n_train }}
           PIPE_N: ${{ inputs.pipe_n }}
