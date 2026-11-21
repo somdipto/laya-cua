@@ -1,0 +1,48 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating test split:   0%|          | 0/1272 [00:00<?, ? examples/s]Generating test split:  16%|█▌        | 200/1272 [00:00<00:00, 1660.94 examples/s]Generating test split:  41%|████      | 524/1272 [00:00<00:00, 1369.01 examples/s]Generating test split:  67%|██████▋   | 848/1272 [00:00<00:00, 1794.12 examples/s]Generating test split:  82%|████████▏ | 1048/1272 [00:00<00:00, 1193.11 examples/s]Generating test split: 100%|██████████| 1272/1272 [00:00<00:00, 1378.40 examples/s]Generating test split: 100%|██████████| 1272/1272 [00:00<00:00, 1380.38 examples/s]
+ScreenSpot total 1272 using 200
+Loading weights:   0%|          | 0/730 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 89/730 [00:00<00:00, 830.89it/s]Loading weights:  24%|██▎       | 173/730 [00:00<00:01, 344.70it/s]Loading weights:  30%|███       | 222/730 [00:00<00:02, 213.00it/s]Loading weights:  35%|███▍      | 254/730 [00:01<00:02, 207.24it/s]Loading weights:  38%|███▊      | 281/730 [00:01<00:02, 200.86it/s]Loading weights:  42%|████▏     | 306/730 [00:01<00:02, 208.61it/s]Loading weights:  49%|████▉     | 359/730 [00:01<00:01, 274.82it/s]Loading weights:  59%|█████▉    | 429/730 [00:01<00:00, 370.41it/s]Loading weights:  69%|██████▊   | 501/730 [00:01<00:00, 447.56it/s]Loading weights:  78%|███████▊  | 571/730 [00:01<00:00, 420.80it/s]Loading weights:  85%|████████▍ | 619/730 [00:08<00:03, 31.33it/s] Loading weights:  89%|████████▉ | 652/730 [00:13<00:04, 16.72it/s]Loading weights:  93%|█████████▎| 676/730 [00:17<00:04, 12.01it/s]Loading weights:  95%|█████████▍| 693/730 [00:21<00:03, 10.02it/s]Loading weights:  97%|█████████▋| 705/730 [00:22<00:02,  9.60it/s]Loading weights:  98%|█████████▊| 714/730 [00:23<00:01, 10.11it/s]Loading weights:  99%|█████████▉| 721/730 [00:24<00:01,  8.62it/s]Loading weights:  99%|█████████▉| 726/730 [00:25<00:00,  9.10it/s]Loading weights: 100%|██████████| 730/730 [00:26<00:00,  7.30it/s]Loading weights: 100%|██████████| 730/730 [00:26<00:00, 27.39it/s]
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/transformers/models/qwen2_vl/image_processing_qwen2_vl.py:129: FutureWarning: Passing `min_pixels` and `max_pixels` to a processor call is deprecated and will be removed in v5.23. Pass in `size={'longest_edge': xxx, 'shortest_edge': xxx} to override the target size.`
+  warnings.warn(
+5/200 acc 0.600 unparsed 0 (163s) last='[0.83, 0.32]'
+10/200 acc 0.700 unparsed 0 (309s) last='[0.5, 0.28]'
+15/200 acc 0.667 unparsed 0 (455s) last='[0.18, 0.74]'
+20/200 acc 0.550 unparsed 0 (599s) last='[0.98, 0.94]'
+25/200 acc 0.520 unparsed 0 (746s) last='[0.06, 0.07]'
+30/200 acc 0.533 unparsed 0 (893s) last='[0.07, 0.2]'
+35/200 acc 0.486 unparsed 0 (1037s) last='[0.13, 0.53]'
+40/200 acc 0.500 unparsed 0 (1181s) last='[0.49, 0.41]'
+45/200 acc 0.467 unparsed 0 (1326s) last='[0.83, 0.49]'
+50/200 acc 0.460 unparsed 0 (1472s) last='[0.89, 0.12]'
+55/200 acc 0.418 unparsed 0 (1620s) last='[0.12, 0.29]'
+60/200 acc 0.417 unparsed 0 (1770s) last='[0.13, 0.14]'
+65/200 acc 0.431 unparsed 0 (1919s) last='[0.49, 0.62]'
+70/200 acc 0.443 unparsed 0 (2066s) last='[0.73, 0.94]'
+75/200 acc 0.427 unparsed 0 (2215s) last='[0.71, 0.18]'
+80/200 acc 0.400 unparsed 0 (2362s) last='[0.94, 0.32]'
+85/200 acc 0.388 unparsed 0 (2511s) last='[0.33, 0.68]'
+90/200 acc 0.400 unparsed 0 (2659s) last='[0.88, 0.82]'
+95/200 acc 0.432 unparsed 0 (2807s) last='[0.91, 0.12]'
+100/200 acc 0.430 unparsed 0 (2954s) last='[0.88, 0.09]'
+105/200 acc 0.438 unparsed 0 (3102s) last='[0.19, 0.41]'
+110/200 acc 0.455 unparsed 0 (3252s) last='[0.06, 0.07]'
+115/200 acc 0.435 unparsed 0 (3399s) last='[0.49, 0.13]'
+120/200 acc 0.425 unparsed 0 (3546s) last='[0.81, 0.18]'
+125/200 acc 0.432 unparsed 0 (3690s) last='[0.75, 0.31]'
+130/200 acc 0.438 unparsed 0 (3833s) last='[0.17, 0.14]'
+135/200 acc 0.437 unparsed 0 (3980s) last='[0.7, 0.92]'
+140/200 acc 0.436 unparsed 0 (4126s) last='[0.76, 0.03]'
+145/200 acc 0.441 unparsed 0 (4261s) last='[0.03, 0.12]'
+150/200 acc 0.433 unparsed 0 (4395s) last='[0.91, 0.64]'
+155/200 acc 0.439 unparsed 0 (4542s) last='[0.5, 0.52]'
+160/200 acc 0.438 unparsed 0 (4689s) last='[0.11, 0.06]'
+165/200 acc 0.430 unparsed 0 (4833s) last='[0.21, 0.61]'
+170/200 acc 0.424 unparsed 0 (4980s) last='[0.88, 0.64]'
+175/200 acc 0.423 unparsed 0 (5130s) last='[0.79, 0.4]'
+180/200 acc 0.417 unparsed 0 (5275s) last='[0.22, 0.42]'
+185/200 acc 0.411 unparsed 0 (5422s) last='[0.8, 0.29]'
+190/200 acc 0.411 unparsed 0 (5568s) last='[0.66, 0.29]'
+195/200 acc 0.400 unparsed 0 (5717s) last='[0.41, 0.41]'
+200/200 acc 0.400 unparsed 0 (5865s) last='[0.53, 0.03]'
+RESULT {"n": 200, "max_pixels_k28sq": 400, "unparsed": 0, "model_acc": {"n": 200, "acc": 0.4}, "center_baseline": {"n": 200, "acc": 0.02}, "random_point_baseline": {"n": 200, "acc": 0.01}, "by_type": {"text": {"n": 111, "acc": 0.3784}, "icon": {"n": 89, "acc": 0.427}}, "by_source": {"android": {"n": 31, "acc": 0.7097}, "forum": {"n": 20, "acc": 0.3}, "gitlab": {"n": 12, "acc": 0.1667}, "ios": {"n": 46, "acc": 0.5217}, "macos": {"n": 26, "acc": 0.2692}, "shop": {"n": 19, "acc": 0.2105}, "tool": {"n": 17, "acc": 0.1176}, "windows": {"n": 29, "acc": 0.4483}}, "seconds": 5865}
+SS DONE

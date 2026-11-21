@@ -1,0 +1,1866 @@
+{
+ "summary": {
+  "n": 200,
+  "max_pixels_k28sq": 400,
+  "unparsed": 0,
+  "model_acc": {
+   "n": 200,
+   "acc": 0.4
+  },
+  "center_baseline": {
+   "n": 200,
+   "acc": 0.02
+  },
+  "random_point_baseline": {
+   "n": 200,
+   "acc": 0.01
+  },
+  "by_type": {
+   "text": {
+    "n": 111,
+    "acc": 0.3784
+   },
+   "icon": {
+    "n": 89,
+    "acc": 0.427
+   }
+  },
+  "by_source": {
+   "android": {
+    "n": 31,
+    "acc": 0.7097
+   },
+   "forum": {
+    "n": 20,
+    "acc": 0.3
+   },
+   "gitlab": {
+    "n": 12,
+    "acc": 0.1667
+   },
+   "ios": {
+    "n": 46,
+    "acc": 0.5217
+   },
+   "macos": {
+    "n": 26,
+    "acc": 0.2692
+   },
+   "shop": {
+    "n": 19,
+    "acc": 0.2105
+   },
+   "tool": {
+    "n": 17,
+    "acc": 0.1176
+   },
+   "windows": {
+    "n": 29,
+    "acc": 0.4483
+   }
+  },
+  "seconds": 5865
+ },
+ "rows": [
+  {
+   "i": 585,
+   "type": "icon",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 974,
+   "type": "icon",
+   "source": "shop",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 470,
+   "type": "icon",
+   "source": "android",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1225,
+   "type": "icon",
+   "source": "shop",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1068,
+   "type": "text",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 649,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 416,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 746,
+   "type": "text",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 775,
+   "type": "icon",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 625,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 660,
+   "type": "icon",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 262,
+   "type": "icon",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1001,
+   "type": "icon",
+   "source": "forum",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 143,
+   "type": "icon",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1246,
+   "type": "text",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 638,
+   "type": "icon",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 991,
+   "type": "icon",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 530,
+   "type": "text",
+   "source": "android",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1229,
+   "type": "text",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 108,
+   "type": "icon",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 456,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": true,
+   "rand_hit": false
+  },
+  {
+   "i": 439,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": true,
+   "rand_hit": false
+  },
+  {
+   "i": 936,
+   "type": "icon",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 648,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 767,
+   "type": "icon",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 607,
+   "type": "icon",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 209,
+   "type": "text",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 462,
+   "type": "icon",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 402,
+   "type": "icon",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 292,
+   "type": "icon",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1022,
+   "type": "icon",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 800,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 25,
+   "type": "icon",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1205,
+   "type": "icon",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 988,
+   "type": "text",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 22,
+   "type": "text",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 469,
+   "type": "text",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 154,
+   "type": "text",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1055,
+   "type": "text",
+   "source": "forum",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 68,
+   "type": "text",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1141,
+   "type": "icon",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 207,
+   "type": "text",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 504,
+   "type": "text",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 151,
+   "type": "text",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 608,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 396,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 6,
+   "type": "icon",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1143,
+   "type": "text",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1033,
+   "type": "text",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 420,
+   "type": "icon",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1226,
+   "type": "text",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1264,
+   "type": "text",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 168,
+   "type": "text",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1268,
+   "type": "icon",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 165,
+   "type": "text",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 158,
+   "type": "text",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 575,
+   "type": "icon",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": true,
+   "rand_hit": false
+  },
+  {
+   "i": 449,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 916,
+   "type": "text",
+   "source": "gitlab",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1039,
+   "type": "text",
+   "source": "forum",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1011,
+   "type": "icon",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 727,
+   "type": "icon",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 429,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 753,
+   "type": "icon",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 412,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 100,
+   "type": "icon",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 653,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 941,
+   "type": "text",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 366,
+   "type": "icon",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 83,
+   "type": "icon",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 296,
+   "type": "text",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 673,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 639,
+   "type": "icon",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 871,
+   "type": "text",
+   "source": "gitlab",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 294,
+   "type": "text",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 32,
+   "type": "icon",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 791,
+   "type": "icon",
+   "source": "android",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1172,
+   "type": "text",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 380,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 955,
+   "type": "icon",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1003,
+   "type": "text",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 624,
+   "type": "icon",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 285,
+   "type": "icon",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1082,
+   "type": "text",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 202,
+   "type": "icon",
+   "source": "macos",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 558,
+   "type": "text",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 559,
+   "type": "icon",
+   "source": "android",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 533,
+   "type": "text",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1045,
+   "type": "icon",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 451,
+   "type": "icon",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 145,
+   "type": "text",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 685,
+   "type": "icon",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 526,
+   "type": "icon",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 77,
+   "type": "icon",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 818,
+   "type": "icon",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1029,
+   "type": "icon",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1009,
+   "type": "text",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 374,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1063,
+   "type": "text",
+   "source": "forum",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1158,
+   "type": "text",
+   "source": "tool",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 521,
+   "type": "text",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 652,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 789,
+   "type": "text",
+   "source": "android",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 371,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 628,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": true,
+   "rand_hit": false
+  },
+  {
+   "i": 35,
+   "type": "text",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 309,
+   "type": "text",
+   "source": "macos",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 142,
+   "type": "text",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 289,
+   "type": "text",
+   "source": "macos",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 700,
+   "type": "icon",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1119,
+   "type": "icon",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 65,
+   "type": "text",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 799,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 872,
+   "type": "text",
+   "source": "gitlab",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 515,
+   "type": "text",
+   "source": "android",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 355,
+   "type": "icon",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 167,
+   "type": "text",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 854,
+   "type": "icon",
+   "source": "gitlab",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 672,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 217,
+   "type": "text",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 103,
+   "type": "text",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 440,
+   "type": "icon",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 664,
+   "type": "icon",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 619,
+   "type": "icon",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1073,
+   "type": "icon",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 80,
+   "type": "icon",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1204,
+   "type": "text",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1027,
+   "type": "icon",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 692,
+   "type": "text",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 345,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 754,
+   "type": "text",
+   "source": "android",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1057,
+   "type": "icon",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 887,
+   "type": "text",
+   "source": "gitlab",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 393,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 498,
+   "type": "text",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 67,
+   "type": "text",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": true
+  },
+  {
+   "i": 178,
+   "type": "text",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 606,
+   "type": "icon",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 219,
+   "type": "icon",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1054,
+   "type": "text",
+   "source": "forum",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 932,
+   "type": "text",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1085,
+   "type": "icon",
+   "source": "tool",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 743,
+   "type": "text",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 161,
+   "type": "text",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 61,
+   "type": "text",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 885,
+   "type": "text",
+   "source": "gitlab",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 286,
+   "type": "icon",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1184,
+   "type": "text",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 141,
+   "type": "icon",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 524,
+   "type": "icon",
+   "source": "android",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 297,
+   "type": "text",
+   "source": "macos",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 200,
+   "type": "icon",
+   "source": "macos",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 879,
+   "type": "text",
+   "source": "gitlab",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1222,
+   "type": "icon",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 293,
+   "type": "icon",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1037,
+   "type": "icon",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 467,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": true
+  },
+  {
+   "i": 236,
+   "type": "icon",
+   "source": "macos",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 989,
+   "type": "text",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 135,
+   "type": "text",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 982,
+   "type": "text",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 481,
+   "type": "icon",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1118,
+   "type": "text",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 912,
+   "type": "text",
+   "source": "gitlab",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1190,
+   "type": "icon",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 192,
+   "type": "text",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 91,
+   "type": "icon",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1193,
+   "type": "icon",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 904,
+   "type": "icon",
+   "source": "gitlab",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 482,
+   "type": "text",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 399,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 196,
+   "type": "icon",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 735,
+   "type": "text",
+   "source": "android",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 279,
+   "type": "text",
+   "source": "macos",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 553,
+   "type": "icon",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1263,
+   "type": "icon",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 647,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1247,
+   "type": "icon",
+   "source": "shop",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 849,
+   "type": "text",
+   "source": "gitlab",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1133,
+   "type": "text",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1176,
+   "type": "icon",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 95,
+   "type": "text",
+   "source": "windows",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 414,
+   "type": "icon",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 312,
+   "type": "icon",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1066,
+   "type": "icon",
+   "source": "forum",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 875,
+   "type": "text",
+   "source": "gitlab",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 864,
+   "type": "icon",
+   "source": "gitlab",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 927,
+   "type": "icon",
+   "source": "shop",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 356,
+   "type": "text",
+   "source": "ios",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 502,
+   "type": "text",
+   "source": "android",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1154,
+   "type": "text",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1179,
+   "type": "icon",
+   "source": "tool",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 76,
+   "type": "text",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 113,
+   "type": "text",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 621,
+   "type": "icon",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1077,
+   "type": "icon",
+   "source": "forum",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 394,
+   "type": "text",
+   "source": "ios",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 266,
+   "type": "icon",
+   "source": "macos",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 50,
+   "type": "text",
+   "source": "windows",
+   "hit": false,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  },
+  {
+   "i": 1267,
+   "type": "icon",
+   "source": "shop",
+   "hit": true,
+   "parsed": true,
+   "center_hit": false,
+   "rand_hit": false
+  }
+ ]
+}
